@@ -12,7 +12,6 @@ use Moose;
 use namespace::autoclean;
 
 use List::Util qw(first);
-use String::ShellQuote;
 
 with (
     'Dist::Zilla::Role::InstallTool',
