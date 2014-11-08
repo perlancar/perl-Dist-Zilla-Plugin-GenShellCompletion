@@ -52,11 +52,11 @@ INSTALL_COMPLETION:
         or die "Can't find pattern in Makefile (2)";
 
     $content .= qq|\ncomp_install :\n\t| .
-        q|$(PERLRUN) -MFile::Which -E'$$path=which("bash-completion-prog"); if ($$path) { system $$path, "--verbose", @ARGV }' -- $(EXE_FILES)| .
+        q|$(PERLRUN) -E'if(eval { require App::BashCompletionProg; 1 }) { system "bash-completion-prog", "--verbose", @ARGV }' -- $(EXE_FILES)| .
         qq|\n\n|;
 
     $content .= qq|\ncomp_uninstall :\n\t| .
-        q|$(PERLRUN) -MFile::Which -E'$$path=which("bash-completion-prog"); if ($$path) { system $$path, "--remove", "--verbose", @ARGV }' -- $(EXE_FILES)| .
+        q|$(PERLRUN) -E'if(eval { require App::BashCompletionProg; 1 }) { system "bash-completion-prog", "--remove", "--verbose", @ARGV }' -- $(EXE_FILES)| .
         qq|\n\n|;
 
     open $fh, ">", "Makefile" or die "Can't write modified Makefile: $!";
