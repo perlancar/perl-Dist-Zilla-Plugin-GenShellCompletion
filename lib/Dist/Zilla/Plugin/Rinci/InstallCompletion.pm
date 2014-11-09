@@ -23,6 +23,11 @@ with (
 sub setup_installer {
   my ($self) = @_;
 
+  unless (@{ $self->found_files }) {
+      $self->log_debug('No scripts in this distribution, skipped');
+      return;
+  }
+
   # first, try MakeMaker
   my $build_script = first { $_->name eq 'Makefile.PL' }
       @{ $self->zilla->files };
