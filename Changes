@@ -1,5 +1,14 @@
 Revision history for Dist-Zilla-Rinci-InstallCompletion
 
+0.02    2014-11-09 (PERLANCAR)
+
+	- Skip adding code to Makefile.PL if there are no scripts/execfiles
+	  in the dist.
+
+	- Revise doc (mention Getopt::Long::Complete,
+	  DZP::GenBashCompletion::GetoptLong).
+
+
 0.01     2014-11-08 (PERLANCAR)
 
          - First release.
