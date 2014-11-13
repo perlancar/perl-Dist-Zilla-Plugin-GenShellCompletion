@@ -2,7 +2,7 @@ Revision history for Dist-Zilla-Rinci-InstallCompletion
 
 0.03    2014-11-13 (PERLANCAR)
 
-	- Increase perl minver to 5.10.1.
+	- Increase perl minver to 5.10.1 [CT].
 
 
 0.02    2014-11-09 (PERLANCAR)
