@@ -1,5 +1,10 @@
 Revision history for Dist-Zilla-Rinci-InstallCompletion
 
+0.03    2014-11-13 (PERLANCAR)
+
+	- Increase perl minver to 5.10.1.
+
+
 0.02    2014-11-09 (PERLANCAR)
 
 	- Skip adding code to Makefile.PL if there are no scripts/execfiles
