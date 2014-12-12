@@ -1,4 +1,4 @@
-package Dist::Zilla::Plugin::Rinci::InstallCompletion;
+package Dist::Zilla::Plugin::GenShellCompletion;
 
 # DATE
 # VERSION
@@ -43,9 +43,9 @@ sub setup_installer {
     (${__PACKAGE__ ."::VERSION"} // 'dev').".\n";
 
   my $body = <<'_';
-INSTALL_COMPLETION:
+GEN_SHELL_COMPLETION:
 {
-    print "Modifying Makefile to install shell completion on install\n";
+    print "Modifying Makefile to generate shell completion on install\n";
     open my($fh), "<", "Makefile" or die "Can't open generated Makefile: $!";
     my $content = do { local $/; ~~<$fh> };
 
@@ -75,7 +75,7 @@ _
 
 no Moose;
 1;
-# ABSTRACT: Install shell completion scripts when distribution is installed
+# ABSTRACT: Generate shell completion scripts when distribution is installed
 
 =for Pod::Coverage setup_installer
 
@@ -83,7 +83,7 @@ no Moose;
 
 In your dist.ini:
 
- [Rinci::InstallCompletion]
+ [GenShellCompletion]
 
 
 =head1 DESCRIPTION
