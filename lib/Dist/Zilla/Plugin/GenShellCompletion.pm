@@ -56,7 +56,7 @@ GEN_SHELL_COMPLETION:
         or die "Can't find pattern in Makefile (2)";
 
     $content .= qq|\ncomp_install :\n\t| .
-        q|$(PERLRUN) -E'if(eval { require App::shcompgen; 1 }) { system "shcompgen", "--verbose", "generate", @ARGV }' -- $(EXE_FILES)| .
+        q|$(PERLRUN) -E'if(eval { require App::shcompgen; 1 }) { system "shcompgen", "--verbose", "generate", "--replace", @ARGV }' -- $(EXE_FILES)| .
         qq|\n\n|;
 
     $content .= qq|\ncomp_uninstall :\n\t| .
