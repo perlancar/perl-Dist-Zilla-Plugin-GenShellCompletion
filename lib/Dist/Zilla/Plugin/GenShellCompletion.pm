@@ -14,11 +14,18 @@ use namespace::autoclean;
 use List::Util qw(first);
 
 with (
+    'Dist::Zilla::Role::BeforeBuild',
     'Dist::Zilla::Role::InstallTool',
     'Dist::Zilla::Role::FileFinderUser' => {
         default_finders => [':ExecFiles'],
     },
 );
+
+sub before_build {
+    my $self = shift;
+
+  $self->zilla->register_prereqs({phase => 'build'}, 'Perl::osnames' => '0.09');
+}
 
 sub setup_installer {
   my ($self) = @_;
@@ -45,6 +52,9 @@ sub setup_installer {
   my $body = <<'_';
 GEN_SHELL_COMPLETION:
 {
+    use Perl::osnames 0.09 qw(is_posix);
+    last unless is_posix();
+
     print "Modifying Makefile to generate shell completion on install\n";
     open my($fh), "<", "Makefile" or die "Can't open generated Makefile: $!";
     my $content = do { local $/; ~~<$fh> };
