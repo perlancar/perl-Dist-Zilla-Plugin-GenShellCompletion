@@ -24,7 +24,7 @@ with (
 sub before_build {
     my $self = shift;
 
-  $self->zilla->register_prereqs({phase => 'build'}, 'Perl::osnames' => '0.09');
+    $self->zilla->register_prereqs({phase => 'configure'}, 'Perl::osnames' => '0.09');
 }
 
 sub setup_installer {
