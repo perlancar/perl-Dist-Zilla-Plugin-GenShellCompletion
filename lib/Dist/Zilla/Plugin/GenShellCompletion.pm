@@ -87,7 +87,7 @@ no Moose;
 1;
 # ABSTRACT: Generate shell completion scripts when distribution is installed
 
-=for Pod::Coverage setup_installer
+=for Pod::Coverage setup_installer before_build
 
 =head1 SYNOPSIS
 
