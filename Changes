@@ -1,5 +1,11 @@
 Revision history for Dist-Zilla-Plugin-GenShellCompletion
 
+0.09    2015-03-25 (PERLANCAR)
+
+	- [Bugfix] Should've used PrereqSource role to register prereq, not
+	  BeforeBuild.
+
+
 0.08    2015-03-25 (PERLANCAR)
 
 	- [Bugfix] Don't add prereq to Perl::osnames if there are no
