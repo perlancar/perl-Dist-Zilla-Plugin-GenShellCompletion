@@ -56,8 +56,8 @@ sub setup_installer {
   my $body = <<'_';
 GEN_SHELL_COMPLETION:
 {
-    use Perl::osnames 0.09 qw(is_posix);
-    last unless is_posix();
+    require Perl::osnames;
+    last unless Perl::osnames::is_posix();
 
     print "Modifying Makefile to generate shell completion on install\n";
     open my($fh), "<", "Makefile" or die "Can't open generated Makefile: $!";
