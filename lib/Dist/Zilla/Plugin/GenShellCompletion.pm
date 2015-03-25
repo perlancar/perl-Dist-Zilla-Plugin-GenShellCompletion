@@ -14,14 +14,14 @@ use namespace::autoclean;
 use List::Util qw(first);
 
 with (
-    'Dist::Zilla::Role::BeforeBuild',
+    'Dist::Zilla::Role::PrereqSource',
     'Dist::Zilla::Role::InstallTool',
     'Dist::Zilla::Role::FileFinderUser' => {
         default_finders => [':ExecFiles'],
     },
 );
 
-sub before_build {
+sub register_prereqs {
     my $self = shift;
 
     unless (@{ $self->found_files }) {
