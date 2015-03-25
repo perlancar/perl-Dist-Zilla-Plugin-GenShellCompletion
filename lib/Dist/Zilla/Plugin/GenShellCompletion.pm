@@ -24,6 +24,10 @@ with (
 sub before_build {
     my $self = shift;
 
+    unless (@{ $self->found_files }) {
+        return;
+    }
+
     $self->zilla->register_prereqs({phase => 'configure'}, 'Perl::osnames' => '0.09');
 }
 
