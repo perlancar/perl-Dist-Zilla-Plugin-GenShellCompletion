@@ -1,5 +1,12 @@
 Revision history for Dist-Zilla-Plugin-GenShellCompletion
 
+0.10    2016-02-29 (PERLANCAR)
+
+	- Use shcompgen generate's remove option (but check that only
+	  App::shcompgen 0.15+ supports this). Also note that $ in Makefile
+	  needs to be escaped into double dollars.
+
+
 0.09    2015-03-25 (PERLANCAR)
 
 	- [Bugfix] Should've used PrereqSource role to register prereq, not
