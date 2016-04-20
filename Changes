@@ -1,5 +1,11 @@
 Revision history for Dist-Zilla-Plugin-GenShellCompletion
 
+0.11    2016-04-20 (PERLANCAR)
+
+	- Remove dependency to Perl::osnames in the generated Makefile.PL
+	  code snippet.
+
+
 0.10    2016-02-29 (PERLANCAR)
 
 	- Use shcompgen generate's remove option (but check that only
