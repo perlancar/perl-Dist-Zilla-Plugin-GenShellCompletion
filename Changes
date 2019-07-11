@@ -1,47 +1,47 @@
-0.11    2016-04-20 (PERLANCAR)
+0.11    2016-04-20  Released-By: PERLANCAR
 
 	- Remove dependency to Perl::osnames in the generated Makefile.PL
 	  code snippet.
 
 
-0.10    2016-02-29 (PERLANCAR)
+0.10    2016-02-29  Released-By: PERLANCAR
 
 	- Use shcompgen generate's remove option (but check that only
 	  App::shcompgen 0.15+ supports this). Also note that $ in Makefile
 	  needs to be escaped into double dollars.
 
 
-0.09    2015-03-25 (PERLANCAR)
+0.09    2015-03-25  Released-By: PERLANCAR
 
 	- [Bugfix] Should've used PrereqSource role to register prereq, not
 	  BeforeBuild.
 
 
-0.08    2015-03-25 (PERLANCAR)
+0.08    2015-03-25  Released-By: PERLANCAR
 
 	- [Bugfix] Don't add prereq to Perl::osnames if there are no
 	  scripts in the dist and we are not adding stuffs to Makefile.PL
 	  [CT#103072].
 
 
-0.07    2014-12-18 (PERLANCAR)
+0.07    2014-12-18  Released-By: PERLANCAR
 
 	- [Bugfix] apparently we need to register prereq Perl::osnames for
 	  phase configure, not build.
 
 
-0.06    2014-12-18 (PERLANCAR)
+0.06    2014-12-18  Released-By: PERLANCAR
 
 	- Skip non-POSIX OS for now (ref:
 	  https://github.com/perlancar/perl-Complete-Util/pull/1).
 
 
-0.05    2014-12-13 (PERLANCAR)
+0.05    2014-12-13  Released-By: PERLANCAR
 
 	- Forgot to add --replace option to shcompgen during install phase.
 
 
-0.04    2014-12-13 (PERLANCAR)
+0.04    2014-12-13  Released-By: PERLANCAR
 
 	- Rename module/dist from DZP-Rinci-InstallCompletion to
           DZP-GenShellCompletion because this plugin is actually not
@@ -52,12 +52,12 @@
           current shell instead of waiting to start a new shell).
 
 
-0.03    2014-11-13 (PERLANCAR)
+0.03    2014-11-13  Released-By: PERLANCAR
 
 	- Increase perl minver to 5.10.1 [CT].
 
 
-0.02    2014-11-09 (PERLANCAR)
+0.02    2014-11-09  Released-By: PERLANCAR
 
 	- Skip adding code to Makefile.PL if there are no scripts/execfiles
 	  in the dist.
@@ -66,6 +66,6 @@
 	  DZP::GenBashCompletion::GetoptLong).
 
 
-0.01     2014-11-08 (PERLANCAR)
+0.01     2014-11-08  Released-By: PERLANCAR
 
          - First release.
